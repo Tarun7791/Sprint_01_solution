@@ -17,7 +17,7 @@ public class PROBLEM_04 {
         num=kb.nextInt();
 
     int original=num;
-    int sum=0;
+    double sum=0;
     int digits= String.valueOf(num).length();
 
     while(num>0){
