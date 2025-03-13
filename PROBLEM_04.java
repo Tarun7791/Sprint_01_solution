@@ -1,6 +1,6 @@
 package Sprint_01;
 import java.util.Scanner;
-class Basic{
+class PROBLEM_04{
 
     public static void main(String[] args) {
 

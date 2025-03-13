@@ -1,5 +1,5 @@
 //  Write a program to determine if a number is prime
-package Sprint_01_solutions;
+package Sprint_01;
 
 import java.util.Scanner;
 
@@ -13,7 +13,7 @@ public class PROBLEM_02 {
 
         boolean isPrime=true;
 
-        if(a>=1){
+        if(a<=1){
             isPrime=false;
         }
         else {

@@ -1,6 +1,6 @@
 //  Write a program to check whether a number is even or odd.
 
-package Sprint_01_solutions;
+package Sprint_01;
 
 import java.util.Scanner;
 

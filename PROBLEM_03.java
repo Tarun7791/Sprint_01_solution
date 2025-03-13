@@ -1,6 +1,6 @@
 // Write a program to check if a given year is a leap year
 
-package Sprint_01_solutions;
+package Sprint_01;
 
 import java.util.Scanner;
 
