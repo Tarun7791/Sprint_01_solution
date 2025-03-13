@@ -1,38 +1,50 @@
-/* Write a program to check if a number is an Armstrong Number.
- Example:
- Input: number = 153
- Output: Armstrong Number
- Explanation: 153 is an Armstrong number because 1^3 + 5^3 + 3^3 =
- 153.
-*/
-package Sprint_01_solutions;
-
+package Sprint_01;
 import java.util.Scanner;
+class Basic{
 
-public class PROBLEM_04 {
     public static void main(String[] args) {
 
         Scanner kb=new Scanner(System.in);
         int num;
+        System.out.println("Enter the number");
         num=kb.nextInt();
+// Step=01 find length of the number
+        int t1=num;
+        int length=0;
+// Step=02 reverse the number and multiply it
+        while(t1!=0){
 
-    int original=num;
-    double sum=0;
-    int digits= String.valueOf(num).length();
+            t1=t1/10;
 
-    while(num>0){
-        int digit=num%10; // Get the last digit
-        sum += Math.pow(digit, digits); // Add digit^digits to sum
-        num /= 10; // remove the last digit
-    }
-
-        if (sum == original) {
-            System.out.println(original + " is an Armstrong number.");
-        } else {
-            System.out.println(original + " is NOT an Armstrong number.");
+            length=length+1;
         }
 
+        int t2=num;
+        int rem;
+        int arm=0;
 
+        while(t2!=0){
+            rem=t2%10;
+            int mul=1;
+
+            for (int i=1;i<=length;i++){
+
+                mul=mul*rem;
+
+            }
+
+            arm=arm+mul;
+            t2=t2/10;
+
+        }
+// Check using if else
+        if (num==arm){
+            System.out.println("It is armstrong no.");
+        }
+        else{
+            System.out.println("It is not a armtrong no.");
+        }
 
     }
+
 }
