@@ -24,7 +24,7 @@ class PROBLEM_04{
         int arm=0;
 
         while(t2!=0){
-            rem=t2%10;
+            rem=t2%10;  // Get last digit
             int mul=1;
 
             for (int i=1;i<=length;i++){
@@ -34,7 +34,7 @@ class PROBLEM_04{
             }
 
             arm=arm+mul;
-            t2=t2/10;
+            t2=t2/10;  // reduce the number
 
         }
 // Check using if else
