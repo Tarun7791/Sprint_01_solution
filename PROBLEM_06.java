@@ -1,33 +1,29 @@
-/* Write a program to check if a string or number is a palindrome.
-Example->  Input: string = "radar"
- Output: Palindrome
- Explanation: “radar” reads the same backward as forward */
-
 package Sprint_01;
 
-public class PROBLEM_06 {
+import java.util.Scanner;
+
+class PROBLEM_06 {
     public static void main(String[] args) {
 
-        String string="radar";
-        boolean flag=true;
+        Scanner kb = new Scanner(System.in);
+        String sr;
+        System.out.println("Enter the string");
+        sr = kb.next();
 
-        string=string.toLowerCase();
+        String rev = "";
 
-        for(int i = 0; i < string.length()/2; i++){
-            if(string.charAt(i) != string.charAt(string.length()-i-1)){
-                flag = false;
-                break;
-            }
+        for (int i = sr.length() - 1; i >= 0; i--) {
+
+            rev = rev + sr.charAt(i);
+
         }
 
-        if(flag){
-            System.out.println("Given string is palindrome");
+        if (sr.equalsIgnoreCase(rev)) {
+            System.out.println("It is a palindrome");
+        } else {
+            System.out.println("It is not a palindrome");
         }
-        else {
-            System.out.println("Given string is not a palindrome");
-        }
+
+
     }
 }
-
-
-
